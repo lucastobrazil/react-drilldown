@@ -1,0 +1,41 @@
+{
+    "name": "react-drilldown",
+    "version": "1.0.0",
+    "description": "A flexible drilldown for react",
+    "main": "index.js",
+    "scripts": {
+        "test": "test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/lucastobrazil/react-drilldown.git"
+    },
+    "keywords": [
+        "react",
+        "drilldown",
+        "menu",
+        "navigation"
+    ],
+    "author": "Lucas Arundell",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/lucastobrazil/react-drilldown/issues"
+    },
+    "homepage": "https://github.com/lucastobrazil/react-drilldown#readme",
+    "devDependencies": {
+        "babel-core": "^6.26.0",
+        "babel-plugin-transform-object-rest-spread": "^6.26.0",
+        "babel-preset-env": "^1.6.1",
+        "babel-preset-react": "^6.24.1",
+        "babel-preset-stage-1": "^6.24.1",
+        "rollup": "^0.53.2",
+        "rollup-plugin-babel": "^3.0.3"
+    },
+    "peerDependencies": {
+        "react": "^15.3.0"
+    },
+    "dependencies": {
+        "prop-types": "^15.6.0",
+        "react": "^15.6.2"
+    }
+}
