@@ -1,0 +1,76 @@
+/* @import '~style/base/vars.m.less';
+@import '~style/base/components/animations';
+
+.container {
+    position: relative;
+    transition: height 600ms cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.itemsList {
+    list-style-type: none;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 0;
+}
+
+.itemsList li {
+    animation-duration: 600ms;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+    margin: 0;
+}
+
+.animateOutToRight,
+.animateOutToLeft {
+    pointer-events: none;
+}
+.animateOutToRight li {
+    animation-name: outToRight;
+}
+.animateOutToRight li {
+    animation-name: outToLeft;
+}
+
+.animateInFromLeft li {
+    animation-name: inFromLeft;
+}
+
+.animateInFromRight li {
+    animation-name: inFromRight;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.item:hover {
+    text-decoration: none;
+    background-color: lighgrey;
+}
+
+.button {
+    cursor: pointer;
+    color: blue;
+    position: relative;
+    width: 100%;
+}
+
+.button:hover:after {
+    color: blue;
+    right: 10px;
+}
+
+.button:after {
+    color: grey;
+    content: '➔';
+    position: absolute;
+    right: 12px;
+    transition: right 150ms ease;
+} */
