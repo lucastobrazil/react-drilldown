@@ -25,13 +25,13 @@
     },
     "homepage": "https://github.com/lucastobrazil/react-drilldown#readme",
     "devDependencies": {
-        "babel-core": "^6.26.0",
+        "babel-core": "^6.26.3",
         "babel-plugin-transform-object-rest-spread": "^6.26.0",
-        "babel-preset-env": "^1.6.1",
+        "babel-preset-env": "^1.7.0",
         "babel-preset-es2015-rollup": "^3.0.0",
         "babel-preset-react": "^6.24.1",
         "babel-preset-stage-1": "^6.24.1",
-        "lodash": "^4.17.5",
+        "lodash": "^4.17.11",
         "rollup": "^0.53.2",
         "rollup-plugin-babel": "^3.0.3"
     },
