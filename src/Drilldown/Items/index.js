@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { isEmpty, isEqual } from 'lodash';
 
-// import styles from './style.css';
-const styles = {};
 const propTypes = {
     items: PropTypes.arrayOf(PropTypes.func).isRequired,
 };
@@ -22,8 +20,8 @@ const ITEM_HEIGHT = 40;
 
 const getContainerHeight = numberItems => `${ITEM_HEIGHT * numberItems}px`;
 
-export const DrilldownButton = props => <button {...props} className={classNames(styles.item, styles.button)} />;
-export const DrilldownLink = props => <a {...props} className={styles.item} />;
+export const DrilldownButton = props => <button {...props} className={classNames('RddItem-item', 'RddItem-button')} />;
+export const DrilldownLink = props => <a {...props} className="RddItem-item" />;
 export default class DrilldownItems extends React.Component {
     constructor() {
         super();
@@ -58,25 +56,25 @@ export default class DrilldownItems extends React.Component {
                 })}
             </ul>
         );
+
         return (
-            <section className={styles.container} style={{ height: getContainerHeight(items.length) }}>
+            <section className="RddItem-container" style={{ height: getContainerHeight(items.length) }}>
                 <ItemsList
                     itemsList={items}
-                    className={classNames(styles.itemsList, {
-                        [styles.animateInFromRight]: hasChanged && direction === 'left',
-                        [styles.animateInFromLeft]: hasChanged && direction === 'right',
+                    className={classNames('RddItem-itemsList', {
+                        'RddItem-animateInFromRight': hasChanged && direction === 'left',
+                        'RddItem-animateInFromLeft': hasChanged && direction === 'right',
                     })}
                 />
-                {!isEmpty(oldProps) &&
-                    hasChanged && (
-                        <ItemsList
-                            itemsList={oldProps.items}
-                            className={classNames(styles.itemsList, {
-                                [styles.animateOutToLeft]: hasChanged && direction === 'left',
-                                [styles.animateOutToRight]: hasChanged && direction === 'right',
-                            })}
-                        />
-                    )}
+                {!isEmpty(oldProps) && hasChanged && (
+                    <ItemsList
+                        itemsList={oldProps.items}
+                        className={classNames('RddItem-itemsList', {
+                            'RddItem-animateOutToLeft': hasChanged && direction === 'left',
+                            'RddItem-animateOutToRight': hasChanged && direction === 'right',
+                        })}
+                    />
+                )}
             </section>
         );
     }
