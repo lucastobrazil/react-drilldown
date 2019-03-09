@@ -1,6 +1,6 @@
 {
     "name": "react-drilldown",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "A flexible drilldown for react",
     "main": "dist/bundle.js",
     "module": "dist/module.js",
