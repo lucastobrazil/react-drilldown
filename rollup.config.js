@@ -1,4 +1,4 @@
-import babel from 'rollup-plugin-babel';
+import babel from '@rollup/plugin-babel';
 import pkg from './package.json';
 
 export default {
@@ -16,19 +16,17 @@ export default {
     ],
     plugins: [
         babel({
+            babelHelpers: 'bundled',
             babelrc: false,
             exclude: ['node_modules/**'],
-            plugins: ['transform-object-rest-spread'],
             presets: [
-                'react',
+                '@babel/preset-react',
                 [
-                    'env',
+                    '@babel/preset-env',
                     {
                         modules: false,
                     },
                 ],
-                'stage-1',
-                'babel-preset-es2015-rollup',
             ],
         }),
     ],
