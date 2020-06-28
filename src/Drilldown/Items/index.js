@@ -16,12 +16,14 @@ const defaultProps = {
 const DEFAULT_STAGGER_TIME = 100;
 
 // todo: we need to get the item height, not rely on this hardcoded value
-const ITEM_HEIGHT = 40;
+const DEFAULT_ITEM_HEIGHT = 40;
 
-const getContainerHeight = numberItems => `${ITEM_HEIGHT * numberItems}px`;
+const getContainerHeight = (itemHeight = DEFAULT_ITEM_HEIGHT, numberItems) => `${itemHeight * numberItems}px`;
 
-export const DrilldownButton = props => <button {...props} className={classNames('RddItem-item', 'RddItem-button')} />;
-export const DrilldownLink = props => <a {...props} className="RddItem-item" />;
+export const DrilldownButton = (props) => (
+    <button {...props} className={classNames('RddItem-item', 'RddItem-button')} />
+);
+export const DrilldownLink = (props) => <a {...props} className="RddItem-item" />;
 export default class DrilldownItems extends React.Component {
     constructor() {
         super();
@@ -39,7 +41,7 @@ export default class DrilldownItems extends React.Component {
     }
 
     render() {
-        const { items, staggeredAnimation, direction } = this.props;
+        const { items, staggeredAnimation, direction, itemHeight } = this.props;
         const { oldProps, hasChanged } = this.state;
         /* todo: this should be extracted, but why is it breaking when i do? */
         const ItemsList = ({ className, itemsList }) => (
@@ -56,9 +58,11 @@ export default class DrilldownItems extends React.Component {
                 })}
             </ul>
         );
+        console.log(itemHeight);
+        
 
         return (
-            <section className="RddItem-container" style={{ height: getContainerHeight(items.length) }}>
+            <section className="RddItem-container" style={{ height: getContainerHeight(itemHeight, items.length) }}>
                 <ItemsList
                     itemsList={items}
                     className={classNames('RddItem-itemsList', {

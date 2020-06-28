@@ -11,6 +11,7 @@ const propTypes = {
     footer: PropTypes.node,
     staggeredAnimation: PropTypes.bool,
     direction: PropTypes.string,
+    itemHeight: PropTypes.number,
 };
 
 const defaultProps = {
@@ -35,12 +36,13 @@ export default class Drilldown extends Component {
     }
 
     render() {
-        const { header, footer, className, items, staggeredAnimation, onBackClick, direction } = this.props;
+        const { header, footer, className, items, staggeredAnimation, onBackClick, direction, itemHeight } = this.props;
         return (
             <div className={className}>
                 <Header content={header} onBackClick={onBackClick ? this.onBackButtonClick.bind(this) : null} />
                 <DrilldownItems
                     items={items}
+                    itemHeight={itemHeight}
                     staggeredAnimation={staggeredAnimation}
                     direction={direction || this.tempDirection}
                 />

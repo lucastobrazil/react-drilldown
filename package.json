@@ -32,7 +32,8 @@
         "babel-preset-es2015-rollup": "^3.0.0",
         "babel-preset-stage-1": "^6.24.1",
         "lodash": "^4.17.15",
-        "rollup": "2.18.1"
+        "rollup": "2.18.1",
+        "react": "^15.3.0"
     },
     "peerDependencies": {
         "react": "^15.3.0"
