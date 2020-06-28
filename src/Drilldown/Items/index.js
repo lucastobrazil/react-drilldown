@@ -58,8 +58,6 @@ export default class DrilldownItems extends React.Component {
                 })}
             </ul>
         );
-        console.log(itemHeight);
-        
 
         return (
             <section className="RddItem-container" style={{ height: getContainerHeight(itemHeight, items.length) }}>
